@@ -26,13 +26,10 @@ public class slots extends Applet {
 			int bet = input2.nextInt();
 			g.setColor(Color.WHITE);
 			g.drawString("Money: $" + money, 10, 20);
-			if(money <= 0){
-				System.out.println("You're out of money!");
-				money = 0;
-			}
+			
 			
 			money = money - bet;
-			if(money <= 0){
+			if(money < 0){
 				System.out.println("Insert more money to continue");
 				money = 0;
 				break;
@@ -186,7 +183,8 @@ public class slots extends Applet {
 
 				if (x1 == x2 && x2 == x) {
 					g.setColor(Color.WHITE);
-					g.fillRect(150, 200, 100, 100);
+					g.fillRect(150, 150, 300, 300);
+					slots.delay(100);
 					g.setColor(Color.GREEN);
 					
 					g.drawString("Congratz! You won 3x your money!", 150, 200);
@@ -198,8 +196,9 @@ public class slots extends Applet {
 					
 				} else if (x1 == x2 || x1 == x || x2 == x) {
 					g.setColor(Color.WHITE);
-					g.fillRect(150, 200, 100, 100);
-					g.setColor(Color.YELLOW);
+					g.fillRect(150, 150, 300, 300);
+					slots.delay(100);
+					g.setColor(Color.ORANGE);
 					g.drawString("Good job! you got two for 2x money", 150, 200);
 					g.setColor(Color.WHITE);
 					g.drawString("Money: $" + money, 10, 20);
@@ -209,7 +208,8 @@ public class slots extends Applet {
 
 				} else {
 					g.setColor(Color.WHITE);
-					g.fillRect(150, 200, 100, 100);
+					g.fillRect(150, 150, 300, 300);
+					slots.delay(100);
 					g.setColor(Color.WHITE);
 					g.drawString("Money: $" + money, 10, 20);
 					g.setColor(Color.RED);
