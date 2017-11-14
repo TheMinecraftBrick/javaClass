@@ -120,6 +120,9 @@ public class Comp {
 				//Lab05vst.paint();
 				
 			}
+			else if(prgm.equalsIgnoreCase("Slots")){
+				
+			}
 
 		}
 
