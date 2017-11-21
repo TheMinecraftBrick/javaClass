@@ -90,7 +90,7 @@ public class Lab06vst extends Applet {
 			int y = 600 - d;
 
 			int xPos = 10 + (int) (Math.random() * (x - 10) + 1); // random pos within our x that was given via formula
-			int yPos = 300 + (int) (Math.random() * (y - 310) + 1); // same for y
+			int yPos = 300 + (int) (Math.random() * (y - 310) + 1); // same for y99
 
 			g.drawOval(xPos, yPos, d, d); // draw the circle
 
