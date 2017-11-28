@@ -102,11 +102,13 @@ public class Lab06vst extends Applet {
 		g.setColor(Color.BLUE); // blue color
 		Polygon s3 = new Polygon();
 		s3.addPoint(650, 350);
-		s3.addPoint(600, 400);
 		s3.addPoint(650, 450);
+		s3.addPoint(700, 500);
 		s3.addPoint(700, 400);
 		g.fillPolygon(s3);
 		// square polygon
+		
+		 
 		
 		g.setColor(Color.YELLOW); // yellow color
 		g.fillRect(550, 350, 100, 100);
@@ -118,8 +120,10 @@ public class Lab06vst extends Applet {
 		s2.addPoint(600, 500);
 		s2.addPoint(550, 450); 
 		g.fillPolygon(s2);
+		
 
 		// s4 polygon
+		
 		g.setColor(Color.RED); // red color square done with polygons cause why not
 		Polygon s4 = new Polygon();
 		s4.addPoint(600, 400);
@@ -127,6 +131,8 @@ public class Lab06vst extends Applet {
 		s4.addPoint(700, 500);
 		s4.addPoint(700, 400);
 		g.fillPolygon(s4);
+		
+		
 		
 
 	}
