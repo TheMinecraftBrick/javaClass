@@ -37,7 +37,7 @@ public class KeyMouse extends JFrame {
         @Override
         public void keyPressed(KeyEvent event) {
             int keyCode = event.getKeyCode();
-            if (keyCode == event.VK_LEFT)
+            if (keyCode == KeyEvent.VK_LEFT)
             {
                 x-=5;
             }
