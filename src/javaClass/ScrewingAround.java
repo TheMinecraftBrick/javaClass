@@ -17,7 +17,7 @@ public class ScrewingAround {
 			String typeFood = input.nextLine();
 
 			if (typeFood.equalsIgnoreCase("pizza")) {
-				System.out.println("What size pizza would you like? lWe offer a 9\", 12\", and 16\"");
+				System.out.println("What size pizza would you like? We offer a 9\", 12\", and 16\"");
 				choice1 = 1;
 				break;
 			} else if (typeFood.equalsIgnoreCase("wings")) {
@@ -64,8 +64,6 @@ public class ScrewingAround {
 				}
 			}
 			}
-			
-			
 			int topping = 0;
 			int saladDressing = 0;
 			int bone = 0;
@@ -150,7 +148,7 @@ public class ScrewingAround {
 				}
 					break;
 			}
-				
+					
 		 else if (choice1 == 3) {
 			 
 			while (true) {
