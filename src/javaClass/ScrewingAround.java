@@ -3,13 +3,15 @@ package javaClass;
 import java.util.*;
 
 public class ScrewingAround {
+	static int choice1 = 0;	
+
 	public static void main(String[] args) {
 
 		
 
 		System.out.println("Welcome to the marching band pizza delivery!");
 		System.out.println();
-		int choice1 = 0;
+		
 		// 0 means nothing was selected, 1 is pizza, 2 is wings, and 3 is salad
 		while (true) { 
 			Scanner input = new Scanner(System.in);
@@ -33,6 +35,7 @@ public class ScrewingAround {
 			}
 			break;
 		}
+		public void sizeOfPizza() {
 		int pizzaSize = 0;
 		if (choice1 == 1) {
 			
