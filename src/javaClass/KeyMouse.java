@@ -5,6 +5,8 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.util.Random;
+
 import javax.swing.JFrame;
 
 public class KeyMouse extends JFrame {
@@ -22,6 +24,10 @@ public class KeyMouse extends JFrame {
 	// Variables
 
 	int y, x, b;
+	Random rand = new Random();
+	int rx = rand.nextInt(780) + 1;
+	Random rand1 = new Random();
+	int ry = rand1.nextInt(780) + 1;
 
 	// Double Buffer
 	private Image dbImage;
@@ -38,11 +44,14 @@ public class KeyMouse extends JFrame {
 		x = 150;
 		y = 150;
 		b = 0;
+		
 
 	}
 
 	public static void main(String[] args) {
 		new KeyMouse();
+		
+
 	}
 
 	// Controls
@@ -77,12 +86,15 @@ public class KeyMouse extends JFrame {
 	}
 
 	public void paintComponenet(Graphics g) {
+	
+
 		if (b == 1) {
 			
 			x -= 2;
 			repaint();
 			g.fillOval(x, y, 15, 15);
-			if (x < 10 || y < 10 || x > 800 || y > 700){
+			g.fillOval(rx, ry, 15, 15);
+			if (x < 0 || y < 25 || x > 780 || y > 680 || x == rx && y == ry){
 				repaint();
 				g.drawString("Game Over", 400, 350);
 				repaint();
@@ -96,7 +108,9 @@ public class KeyMouse extends JFrame {
 			x += 2;
 			repaint();
 			g.fillOval(x, y, 15, 15);
-			if (x < 10 || y < 10 || x > 800 || y > 700){
+			g.fillOval(rx, ry, 15, 15);
+
+			if (x < 0 || y < 25 || x > 780 || y > 680 || x == rx && y == ry){
 				repaint();
 				g.drawString("Game Over", 400, 350);
 				repaint();
@@ -109,7 +123,9 @@ public class KeyMouse extends JFrame {
 			y -= 2;
 			repaint();
 			g.fillOval(x, y, 15, 15);
-			if (x < 10 || y < 10 || x > 800 || y > 700){
+			g.fillOval(rx, ry, 15, 15);
+
+			if (x < 0 || y < 25 || x > 780 || y > 680 || x == rx && y == ry){
 				repaint();
 				g.drawString("Game Over", 400, 350);
 				repaint();
@@ -123,7 +139,9 @@ public class KeyMouse extends JFrame {
 			y += 2;
 			repaint();
 			g.fillOval(x, y, 15, 15);
-			if (x < 10 || y < 10 || x > 800 || y > 700){
+			g.fillOval(rx, ry, 15, 15);
+
+			if (x < 0 || y < 25 || x > 780 || y > 680 || x == rx && y == ry){
 				repaint();
 				g.drawString("Game Over", 400, 350);
 				repaint();

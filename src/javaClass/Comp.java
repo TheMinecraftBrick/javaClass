@@ -114,14 +114,17 @@ public class Comp {
 
 			}
 			else if (prgm.equalsIgnoreCase("PRGMS")) {
-				System.out.println("RPS, guess, Lab5");
+				System.out.println("RPS, Lab5");
 			}
 			else if(prgm.equalsIgnoreCase("Lab5")){
-				//Lab05vst.paint();
+				Lab05vst lab05vst = new Lab05vst();
+				//lab05vst.paint(Graphics g);
 				
 			}
 			else if(prgm.equalsIgnoreCase("Slots")){
-				
+				slots s = new slots();
+				//s.
+			
 			}
 
 		}
