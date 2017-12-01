@@ -13,6 +13,9 @@ import java.applet.*;
 
 public class Lab05vst extends Applet {
 	public void paint(Graphics g) {
+		Lab05vst.draw(g);
+	}
+	public static void draw(Graphics g) {
 	
 		int width = 980;
 		int height = 630;

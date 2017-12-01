@@ -94,7 +94,10 @@ public class KeyMouse extends JFrame {
 			repaint();
 			g.fillOval(x, y, 15, 15);
 			g.fillOval(rx, ry, 15, 15);
-			if (x < 0 || y < 25 || x > 780 || y > 680 || x == rx && y == ry){
+			if((x >= rx - 15 && x <= rx+15) && (y >= ry - 15 && y <= ry + 15)) {
+				System.out.println("yay");
+			}
+			if (x < 0 || y < 25 || x > 780 || y > 680){
 				repaint();
 				g.drawString("Game Over", 400, 350);
 				repaint();
@@ -103,14 +106,20 @@ public class KeyMouse extends JFrame {
 			}
 
 		} else if (b == 0) {
-			System.out.println("y" + y);
-			System.out.println("x" + x);
+			//System.out.println("y" + y);
+			//System.out.println("x" + x);
 			x += 2;
 			repaint();
 			g.fillOval(x, y, 15, 15);
 			g.fillOval(rx, ry, 15, 15);
+			if((x >= rx - 15 && x <= rx+15) && (y >= ry - 15 && y <= ry + 15)) {
+				System.out.println("yay");
+				g.setColor(Color.WHITE);
+				g.fillOval(rx, ry, 15, 15);
+				g.setColor(Color.BLACK);
 
-			if (x < 0 || y < 25 || x > 780 || y > 680 || x == rx && y == ry){
+			}
+			if (x < 0 || y < 25 || x > 780 || y > 680) {
 				repaint();
 				g.drawString("Game Over", 400, 350);
 				repaint();
@@ -118,14 +127,16 @@ public class KeyMouse extends JFrame {
 				
 			}
 		}else if (b == 2){
-			System.out.println("y" + y);
-			System.out.println("x" + x);
+			//System.out.println("y" + y);
+			//System.out.println("x" + x);
 			y -= 2;
 			repaint();
 			g.fillOval(x, y, 15, 15);
 			g.fillOval(rx, ry, 15, 15);
-
-			if (x < 0 || y < 25 || x > 780 || y > 680 || x == rx && y == ry){
+			if((x >= rx - 15 && x <= rx+15) && (y >= ry - 15 && y <= ry + 15)) {
+				System.out.println("yay");
+			}
+			if (x < 0 || y < 25 || x > 780 || y > 680 ){
 				repaint();
 				g.drawString("Game Over", 400, 350);
 				repaint();
@@ -134,14 +145,16 @@ public class KeyMouse extends JFrame {
 
 			}
 		}else if(b == 3){
-			System.out.println("y" + y);
-			System.out.println("x" + x);
+			//System.out.println("y" + y);
+			//System.out.println("x" + x);
 			y += 2;
 			repaint();
 			g.fillOval(x, y, 15, 15);
 			g.fillOval(rx, ry, 15, 15);
-
-			if (x < 0 || y < 25 || x > 780 || y > 680 || x == rx && y == ry){
+			if((x >= rx - 15 && x <= rx+15) && (y >= ry - 15 && y <= ry + 15)) {
+				System.out.println("yay");
+			}
+			if (x < 0 || y < 25 || x > 780 || y > 680 ){
 				repaint();
 				g.drawString("Game Over", 400, 350);
 				repaint();
