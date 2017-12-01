@@ -116,7 +116,11 @@ public class KeyMouse extends JFrame {
 				System.out.println("yay");
 				g.setColor(Color.WHITE);
 				g.fillOval(rx, ry, 15, 15);
+				repaint();
+				rx = rand.nextInt(750) + 1;
+				ry = rand1.nextInt(750) + 1;
 				g.setColor(Color.BLACK);
+				
 
 			}
 			if (x < 0 || y < 25 || x > 780 || y > 680) {
