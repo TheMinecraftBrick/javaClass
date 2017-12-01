@@ -8,6 +8,9 @@ import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
 
 public class KeyMouse extends JFrame {
+
+
+
 	public static void delay(int x) {
 		try {
 			Thread.sleep(x);
@@ -75,40 +78,57 @@ public class KeyMouse extends JFrame {
 
 	public void paintComponenet(Graphics g) {
 		if (b == 1) {
-
-			System.out.println(x);
+			
 			x -= 2;
 			repaint();
 			g.fillOval(x, y, 15, 15);
 			if (x < 10 || y < 10 || x > 800 || y > 700){
+				repaint();
+				g.drawString("Game Over", 400, 350);
+				repaint();
 				KeyMouse.delay(1000000000);
-
+				
 			}
 
 		} else if (b == 0) {
+			System.out.println("y" + y);
+			System.out.println("x" + x);
 			x += 2;
 			repaint();
 			g.fillOval(x, y, 15, 15);
 			if (x < 10 || y < 10 || x > 800 || y > 700){
+				repaint();
+				g.drawString("Game Over", 400, 350);
+				repaint();
 				KeyMouse.delay(1000000000);
+				
 			}
 		}else if (b == 2){
-			System.out.println(x);
+			System.out.println("y" + y);
+			System.out.println("x" + x);
 			y -= 2;
 			repaint();
 			g.fillOval(x, y, 15, 15);
 			if (x < 10 || y < 10 || x > 800 || y > 700){
+				repaint();
+				g.drawString("Game Over", 400, 350);
+				repaint();
 				KeyMouse.delay(1000000000);
+				
 
 			}
 		}else if(b == 3){
-			System.out.println(x);
+			System.out.println("y" + y);
+			System.out.println("x" + x);
 			y += 2;
 			repaint();
 			g.fillOval(x, y, 15, 15);
 			if (x < 10 || y < 10 || x > 800 || y > 700){
+				repaint();
+				g.drawString("Game Over", 400, 350);
+				repaint();
 				KeyMouse.delay(1000000000);
-
+				
 			}
 		} 
 			
@@ -116,5 +136,6 @@ public class KeyMouse extends JFrame {
 		KeyMouse.delay(10);
 
 	}
+
 
 }
