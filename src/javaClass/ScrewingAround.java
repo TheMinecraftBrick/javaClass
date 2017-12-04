@@ -33,7 +33,8 @@ public class ScrewingAround {
 			} else {
 				System.out.println("That is not a valid option, please choose again");
 			}
-			break;
+		}
+			
 		}
 		public void sizeOfPizza() {
 		int pizzaSize = 0;
