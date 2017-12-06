@@ -1,5 +1,6 @@
 package javaClass;
 
+import java.awt.Graphics;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -14,7 +15,7 @@ public class Comp {
 		}
 	}
 
-	public static void main(String args[]) {
+	public static void main(Graphics g) {
 		Scanner input = new Scanner(System.in);
 		while (true) {
 			Scanner input1 = new Scanner(System.in);

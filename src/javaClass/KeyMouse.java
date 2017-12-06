@@ -1,6 +1,7 @@
 package javaClass;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.KeyAdapter;
@@ -23,11 +24,12 @@ public class KeyMouse extends JFrame {
 	}
 	// Variables
 
-	int y, x, b;
+	int y, x, b, score;
+	double s;
 	Random rand = new Random();
-	int rx = rand.nextInt(780) + 1;
+	int rx = rand.nextInt(920) + 30;
 	Random rand1 = new Random();
-	int ry = rand1.nextInt(780) + 1;
+	int ry = rand1.nextInt(620) + 30;
 
 	// Double Buffer
 	private Image dbImage;
@@ -37,21 +39,20 @@ public class KeyMouse extends JFrame {
 	public KeyMouse() {
 		addKeyListener(new Key());
 		setTitle("Snake");
-		setSize(800, 700);
+		setSize(1000, 700);
 		setResizable(false);
 		setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		x = 150;
 		y = 150;
 		b = 0;
-		
+		s = 1;
 
 	}
 
 	public static void main(String[] args) {
 		new KeyMouse();
-		
-
+	
 	}
 
 	// Controls
@@ -77,75 +78,147 @@ public class KeyMouse extends JFrame {
 		}
 
 	}
-
+	@Override
 	public void paint(Graphics g) {
 		dbImage = createImage(getWidth(), getHeight());
 		dbg = dbImage.getGraphics();
-		paintComponenet(dbg);
+		paintComponent(dbg);
 		g.drawImage(dbImage, 0, 0, this);
+		g.setColor(Color.YELLOW);
+		g.setFont(new Font("Open Sans", Font.BOLD, 22));
+		g.drawString("Score: " + score, 50, 50);
 	}
-
-	public void paintComponenet(Graphics g) {
 	
+	public void paintComponent(Graphics g) {
+		super.paintComponents(g);
+		g.setColor(Color.BLACK);
+		g.fillRect(0, 0, 1000, 800);
+		g.setColor(Color.GREEN);
+	
+		
 
 		if (b == 1) {
 			
-			x -= 2;
+			x -= s;
 			repaint();
+			g.setColor(Color.GREEN);
 			g.fillOval(x, y, 15, 15);
+			g.setColor(Color.ORANGE);
 			g.fillOval(rx, ry, 15, 15);
-			if (x < 0 || y < 25 || x > 780 || y > 680 || x == rx && y == ry){
+			if((x >= rx - 15 && x <= rx+15) && (y >= ry - 15 && y <= ry + 15)) {
+			
+				score += 1;
+				s+=0.5;
+				System.out.println("Score: " + score);
+				System.out.println("Speed: " + s);
+				g.setColor(Color.BLACK);
+				g.fillOval(rx, ry, 15, 15);
+				rx = rand.nextInt(920) + 30;
+				ry = rand1.nextInt(620) + 30;
+				g.setColor(Color.GREEN);
+			}
+			if (x < 0 || y < 25 || x > 980 || y > 680){
 				repaint();
 				g.drawString("Game Over", 400, 350);
 				repaint();
-				KeyMouse.delay(1000000000);
-				
+				KeyMouse.delay(5000);	
+				System.exit(0);
 			}
+			
+			
 
 		} else if (b == 0) {
-			System.out.println("y" + y);
-			System.out.println("x" + x);
-			x += 2;
+			//System.out.println("y" + y);
+			//System.out.println("x" + x);
+			x += s;
 			repaint();
+			g.setColor(Color.GREEN);
 			g.fillOval(x, y, 15, 15);
+			g.setColor(Color.ORANGE);
 			g.fillOval(rx, ry, 15, 15);
-
-			if (x < 0 || y < 25 || x > 780 || y > 680 || x == rx && y == ry){
+			if((x >= rx - 15 && x <= rx+15) && (y >= ry - 15 && y <= ry + 15)) {
+			
+				score += 1;
+				s += 0.5;
+				System.out.println("Score: " + score);
+				System.out.println("Speed: " + s);
+				g.setColor(Color.BLACK);
+				g.fillOval(rx, ry, 15, 15);
+				rx = rand.nextInt(920) + 30;
+				ry = rand1.nextInt(620) + 30;
+				g.setColor(Color.GREEN);
+			}
+			if (x < 0 || y < 25 || x > 980 || y > 680) {
 				repaint();
 				g.drawString("Game Over", 400, 350);
 				repaint();
-				KeyMouse.delay(1000000000);
+				KeyMouse.delay(5000);	
+				System.exit(0);
+				
+				
 				
 			}
 		}else if (b == 2){
-			System.out.println("y" + y);
-			System.out.println("x" + x);
-			y -= 2;
+			//System.out.println("y" + y);
+			//System.out.println("x" + x);
+			y -= s;
 			repaint();
+			g.setColor(Color.GREEN);
 			g.fillOval(x, y, 15, 15);
+			g.setColor(Color.ORANGE);
 			g.fillOval(rx, ry, 15, 15);
-
-			if (x < 0 || y < 25 || x > 780 || y > 680 || x == rx && y == ry){
+			if((x >= rx - 15 && x <= rx+15) && (y >= ry - 15 && y <= ry + 15)) {
+				
+				score += 1;
+				s += 0.5;
+				System.out.println("Score: " + score);
+				System.out.println("Speed: " + s);
+				g.setColor(Color.BLACK);
+				g.fillOval(rx, ry, 15, 15);
+				rx = rand.nextInt(920) + 30;
+				ry = rand1.nextInt(620) + 30;
+				g.setColor(Color.GREEN);
+			}
+			if (x < 0 || y < 25 || x > 980 || y > 680 ){
 				repaint();
 				g.drawString("Game Over", 400, 350);
 				repaint();
-				KeyMouse.delay(1000000000);
+				KeyMouse.delay(5000);	
+				System.exit(0);
+				
+				
 				
 
 			}
 		}else if(b == 3){
-			System.out.println("y" + y);
-			System.out.println("x" + x);
-			y += 2;
+			//System.out.println("y" + y);
+			//System.out.println("x" + x);
+			y += s;
 			repaint();
+			g.setColor(Color.GREEN);
 			g.fillOval(x, y, 15, 15);
+			g.setColor(Color.ORANGE);
 			g.fillOval(rx, ry, 15, 15);
+			
+			if((x >= rx - 15 && x <= rx+15) && (y >= ry - 15 && y <= ry + 15)) {
+				
+				score += 1;
+				s += 0.5;
+				System.out.println("Score: " + score);
+				System.out.println("Speed: " + s);
+				g.setColor(Color.BLACK);
+				g.fillOval(rx, ry, 15, 15);
+				rx = rand.nextInt(920) + 30;
+				ry = rand1.nextInt(620) + 30;
+				g.setColor(Color.GREEN);
 
-			if (x < 0 || y < 25 || x > 780 || y > 680 || x == rx && y == ry){
-				repaint();
+			}
+			
+			if (x < 0 || y < 25 || x > 980 || y > 680 ){
 				g.drawString("Game Over", 400, 350);
-				repaint();
-				KeyMouse.delay(1000000000);
+				KeyMouse.delay(5000);	
+				System.exit(0);
+				
 				
 			}
 		} 
