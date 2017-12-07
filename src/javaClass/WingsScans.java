@@ -5,6 +5,13 @@ import java.util.Scanner;
 
 public class WingsScans extends PizzaDeliveryAttempt2{
 	
+	static boolean mildSauce = false;
+	static boolean mediumSauce = false;
+	static boolean hotSauce = false;
+	
+	static boolean boneYes = false;
+	static boolean boneNo = false;
+	
 	public static void wingsSauceScan() {
 		
 		do {

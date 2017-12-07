@@ -5,6 +5,14 @@ import java.util.Scanner;
 
 public class PizzaScans extends PizzaDeliveryAttempt2 {
 	
+	static boolean nineInch = false;
+	static boolean twelveInch = false;
+	static boolean sixteenInch = false;
+
+	static boolean pepperoni = false;
+	static boolean sausage = false;
+	static boolean bacon = false;
+	
 	public static void pizzaSizeScan() {
 		
 		do  {

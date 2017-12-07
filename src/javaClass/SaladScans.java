@@ -16,17 +16,20 @@ public class SaladScans extends PizzaDeliveryAttempt2 {
 	public static void dressingScan() {
 		
 		do {
-			System.out.println("What dressing would you like? We have Caesar, Frehcn, and Italian");
+			System.out.println("What dressing would you like? We have Caesar, French, and Italian");
 			Scanner dressingInput = new Scanner(System.in);
 			String dressing = dressingInput.nextLine();
 				if(dressing.equalsIgnoreCase("caesar")) {
 					caesarDressing = true;
+					croutonsScan();
 				}
 				else if(dressing.equalsIgnoreCase("french")) {
 					frenchDressing = true;
+					croutonsScan();
 				}
 				else if(dressing.equalsIgnoreCase("italian")) {
 					italianDressing = true;
+					croutonsScan();
 				}
 				else {
 					System.out.println("Please choose a correct dressing");
