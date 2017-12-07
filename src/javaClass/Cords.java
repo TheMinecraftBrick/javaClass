@@ -35,10 +35,10 @@ public class Cords extends Applet {
         if(mouseX != mouseX2) {
         	g.setColor(Color.WHITE);
             g.fillRect((int) mouseX, 400, 1000, 50);
-            Cords.delay(100);
+            
         	g.setColor(Color.YELLOW);
             g.fillRect((int) mouseX, 400, 100, 50);
-            Cords.delay(100);
+         
            
         }
        
