@@ -78,18 +78,23 @@ public class PizzaDeliveryAttempt2 {
 		}
 		
 		double pizzaToppingCost = 0;
+		String pizzaTopping = "";
 		
 		if(PizzaScans.pepperoni == true) {
 			pizzaToppingCost = 0.99;
+			pizzaTopping = "Pepperoni";
 		}
 		else if(PizzaScans.sausage == true) {
 			pizzaToppingCost = 1.49;
+			pizzaTopping = "Sausage";
 		}
 		else if(PizzaScans.bacon == true) {
 			pizzaToppingCost = 1.99;
+			pizzaTopping = "Bacon";
 		}
 		
 		double wingsSauceCost = 0;
+		String wings = "";
 		
 		if(WingsScans.mildSauce == true) {
 			wingsSauceCost = 0.99;
