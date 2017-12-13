@@ -8,6 +8,14 @@ public class PizzaDeliveryAttempt2 {
 	static boolean salad = false;
 	static boolean wings = false;
 	
+	static boolean caesarDressing = false;
+	static boolean frenchDressing = false;
+	static boolean italianDressing = false;
+	
+	static boolean normalCroutons = false;
+	static boolean spicyCroutons = false;
+	static boolean softCroutons = false;
+	
 	public static void main(String[] args) {
 		
 		firstScan();
@@ -44,7 +52,7 @@ public class PizzaDeliveryAttempt2 {
 	public static void calculateCost() {
 		
 		double baseCost = 0;
-		String initialReceipt = "";
+		String initialReceipt = null;
 		
 		if(pizza == true) {
 			baseCost = 10.49;
@@ -60,7 +68,7 @@ public class PizzaDeliveryAttempt2 {
 		}
 		
 		double pizzaSizeCost = 0;
-		String pizzaSize = "";
+		String pizzaSize = null;
 		
 		if(PizzaScans.nineInch == true) {
 			pizzaSizeCost = 0;
@@ -73,12 +81,10 @@ public class PizzaDeliveryAttempt2 {
 		else if(PizzaScans.sixteenInch == true) {
 			pizzaSizeCost = 2.99;
 			pizzaSize = "16\"";
-			
-			//Finish receipt
 		}
 		
 		double pizzaToppingCost = 0;
-		String pizzaTopping = "";
+		String pizzaTopping = null;
 		
 		if(PizzaScans.pepperoni == true) {
 			pizzaToppingCost = 0.99;
@@ -94,52 +100,85 @@ public class PizzaDeliveryAttempt2 {
 		}
 		
 		double wingsSauceCost = 0;
-		String wings = "";
+		String wing = null;
 		
 		if(WingsScans.mildSauce == true) {
 			wingsSauceCost = 0.99;
+			wing = "Mild Sauce";
 		}
 		else if(WingsScans.mediumSauce == true) {
 			wingsSauceCost = 1.49;
+			wing = "Medium Sauce";
 		}
 		else if(WingsScans.hotSauce == true) {
 			wingsSauceCost = 2.99;
+			wing = "Hot Sauce";
 		}
 		
 		double boneCost = 0;
+		String bone = null;
 		
 		if(WingsScans.boneNo == true) {
 			boneCost = 1.99;
+			bone = "Not Boneless";
 		}
 		else if(WingsScans.boneYes == true) {
 			boneCost = 2.99;
+			bone = "Boneless";
 		}
 		
 		double dressingCost = 0;
+		String dressing = null;
 		
 		if(SaladScans.caesarDressing == true) {
 			dressingCost = 0.99;
+			dressing = "Caesar Dressing";
 		}
 		else if(SaladScans.frenchDressing == true) {
 			dressingCost = 1.49;
+			dressing = "French Dressing";
 		}
 		else if(SaladScans.italianDressing == true) {
 			dressingCost = 1.99;
+			dressing = "Italian Dressing";
 		}
 		
 		double croutonCost = 0;
+		String crouton = null;
 		
 		if(SaladScans.normalCroutons == true) {
 			croutonCost = 0.49;
+			crouton = "Normal Croutons";
 		}
 		else if(SaladScans.spicyCroutons == true) {
 			croutonCost = 2.99;
+			crouton = "Spicy Croutons";
 		}
 		else if(SaladScans.softCroutons == true) {
 			croutonCost = 1.49;
+			crouton = "Soft Croutons";
+		}
+		
+		System.out.println();
+		System.out.println();
+		
+		if(pizza == true) {
+			System.out.println(initialReceipt);
+			System.out.println(pizzaSize);
+			System.out.println(pizzaTopping);
+		}else if(wings = true) {
+			System.out.println(initialReceipt);
+			System.out.println(wing);
+			System.out.println(bone);
+		}else if(salad == true) {
+			System.out.println(initialReceipt);
+			System.out.println(dressing);
+			System.out.println(crouton);
+			//For some reason, salad always returns "null"
 		}
 		
 		double totalCost = baseCost + pizzaSizeCost + pizzaToppingCost + wingsSauceCost + boneCost + dressingCost + croutonCost;
+		System.out.println();
 		System.out.println("Your total cost:  $" + totalCost);
 		
 	}
