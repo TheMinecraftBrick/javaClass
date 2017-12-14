@@ -54,6 +54,7 @@ public class WingsScans extends PizzaDeliveryAttempt2{
 				}
 		}
 		while(boneYes == false && boneNo == false);
+		PizzaDeliveryAttempt2.addToCart();
 	}
 
 }

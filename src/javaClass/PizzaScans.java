@@ -54,10 +54,10 @@ public class PizzaScans extends PizzaDeliveryAttempt2 {
 				bacon = true;
 			} else {
 				System.out.println("That is not one of our toppings");
-				topping = toppingInput.nextLine();
 			}
 		}
 		while (pepperoni == false && sausage == false && bacon == false);
+		PizzaDeliveryAttempt2.addToCart();
 	
 	}
 

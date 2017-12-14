@@ -60,6 +60,7 @@ public class SaladScans extends PizzaDeliveryAttempt2 {
 				}
 		}
 		while(normalCroutons == false && spicyCroutons == false && softCroutons == false);
+		PizzaDeliveryAttempt2.addToCart();
 	}
 	
 	
