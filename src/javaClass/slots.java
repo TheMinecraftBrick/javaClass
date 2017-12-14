@@ -17,6 +17,11 @@ public class slots extends Applet {
 	}
 
 	public void paint(Graphics g) {
+		machine.slotMachine(g);
+	}
+	public static class machine{
+		
+		public static void slotMachine(Graphics g) {
 		int money = 250;
 		g.drawString("Money: $" + money, 10, 20);
 		while (true) {
@@ -228,5 +233,7 @@ public class slots extends Applet {
 			
 		}
 	}
-
+	}
 }
+
+
