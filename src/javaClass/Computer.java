@@ -118,15 +118,24 @@ public class Computer extends Applet {
 					}
 
 				} else if (prgm.equalsIgnoreCase("PRGMS")) {
-					System.out.println("RPS, Lab5");
+					System.out.println("RPS, Lab5, Slots, Border Patrol");
 				} else if (prgm.equalsIgnoreCase("Lab5")) {
-					Lab05vst lab05vst = new Lab05vst();
+					Lab05vst lab5 = new Lab05vst();
+					lab5.paint(g);
 
 				} else if (prgm.equalsIgnoreCase("Slots")) {
-					slots s = new slots();
-					
+					slots s = new slots();	
 					s.paint(g);
 
+				}else if (prgm.equalsIgnoreCase("Border Patrol")) {
+					KeyMouse key = new KeyMouse();
+					key.paint(g);
+					
+				}else if (prgm.equalsIgnoreCase("Order Pizza")) {
+					
+				}else if (prgm.equalsIgnoreCase("Freeform")) {
+					Freeform free = new Freeform();
+					free.paint(g);
 				}
 
 			}
