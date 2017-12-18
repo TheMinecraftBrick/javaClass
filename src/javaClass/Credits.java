@@ -14,11 +14,11 @@ public class Credits extends Applet {
 	public void credits(Graphics g) {
 		
 		int width = 50;
-		int height = 550;
+		int height = 540;
 		int fontSize = 70;
 		
 		int width2 = 15;
-		int height2 = 590;
+		int height2 = 650;
 		int fontSize2 = 80;
 		
 		g.setColor(Color.BLACK);
@@ -63,10 +63,6 @@ public class Credits extends Applet {
 			
 			g.setFont(new Font("Second font", Font.BOLD, fontSize2));
 			g.drawString("By: Ben and Kush", width2, height2);
-			
-			
-			
-			
 		}
 
 	}
