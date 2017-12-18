@@ -52,7 +52,7 @@ public class Credits extends Applet {
 			g.setFont(new Font("Credits Font", Font.BOLD, fontSize));
 			g.drawString("JAVA Mini Computer", width, height);
 			
-			
+			//hi
 			
 		}
 
