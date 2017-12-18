@@ -53,12 +53,14 @@ public class KeyMouse extends JFrame {
 		b = 10;
 		s = 1;
 		story = 0;
+		
 
 	}
 
 	public static void main(String[] args) {
 		new KeyMouse();
 		//main to run it
+		
 	}
 
 	// Controls
@@ -67,6 +69,7 @@ public class KeyMouse extends JFrame {
 		public void keyPressed(KeyEvent event) {
 
 			int keyCode = event.getKeyCode();
+			
 			
 			if (keyCode == KeyEvent.VK_LEFT) {
 				b = 1;
@@ -102,6 +105,14 @@ public class KeyMouse extends JFrame {
 		g.setFont(new Font("Open Sans", Font.BOLD, 22));
 		g.drawString("Score: " + score, 50, 50);
 		//create screen
+		repaint();
+		g.setColor(Color.BLUE); //player
+		g.fillOval(x, y, 20, 20);
+		g.setColor(Color.ORANGE); //objective
+		g.fillOval(rx, ry, 15, 15);
+		
+		
+		
 	}
 	
 	public void paintComponent(Graphics g) {
@@ -114,18 +125,23 @@ public class KeyMouse extends JFrame {
 		g.fillRect(375, 500, 300, 150);
 		g.setFont(new Font("Courier New", Font.BOLD, 12));
 		g.setColor(Color.BLUE);
-		g.drawString("You are a A border patrol agent,(Blue Dot)", 375, 530);
-		
-		
-		
-//check for movement and scoring
-		if(b == 10) {
+		g.drawString("You are a A border patrol agent,(Blue Dot)", 380, 530);
+		g.drawString("Attempting to collect up all the criminals", 380, 550);
+		g.drawString("(Yellow Dots). Don't touch the borders!", 380, 570);
+		g.drawString("Use the Arrow keys to Move!", 380, 590);
+		g.setColor(Color.YELLOW);
+		g.drawString("Press any <Arrow Key> to continue", 400, 620);
+	
+		if(story == 1){
+			
+			g.setColor(Color.BLACK);
+			g.fillRect(375, 500, 300, 150);
 			repaint();
-			g.setColor(Color.BLUE); //player
-			g.fillOval(x, y, 20, 20);
-			g.setColor(Color.ORANGE); //objective
-			g.fillOval(rx, ry, 15, 15);
+			
 		}
+		
+//check for movement and scoring 
+		
 		if (b == 1) {
 			
 			x -= s;
