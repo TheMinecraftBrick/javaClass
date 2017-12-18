@@ -11,7 +11,7 @@ public class Credits extends Applet {
 		credits(g);
 	}
 
-	public void credits(Graphics g) {
+	public static void credits(Graphics g) {
 		
 		int width = 50;
 		int height = 540;

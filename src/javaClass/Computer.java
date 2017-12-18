@@ -174,6 +174,9 @@ public class Computer extends Applet {
 				}else if (prgm.equalsIgnoreCase("Hello")) {
 				HelloWorld.hello();
 				}else if (prgm.equalsIgnoreCase("Credits")) {
+					reset(g);
+					Comp.delay(100);
+					Credits.credits(g);
 				
 				}
 				
