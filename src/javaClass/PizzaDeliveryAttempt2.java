@@ -3,6 +3,8 @@ package javaClass;
 import java.math.BigDecimal;
 import java.util.*;
 
+//Created by Sabo
+
 public class PizzaDeliveryAttempt2 {
 
 	static boolean pizza = false;
@@ -88,24 +90,24 @@ public class PizzaDeliveryAttempt2 {
 		double basePizzaCost = 0;
 		double baseWingsCost = 0;
 		double baseSaladCost = 0;
-		String initialPizzaReceipt = null;
-		String initialWingsReceipt = null;
-		String initialSaladReceipt = null;
+		String initialPizzaReceipt = "";
+		String initialWingsReceipt = "";
+		String initialSaladReceipt = "";
 		//Strings have to be initialized as null so that they can be used in "if" statements
 		
 		//The doubles are set to values based on which booleans are true
 		//The strings are also set to certain things based on which booleans are true
 		if(pizza == true) {
-			basePizzaCost = 10.49;
-			initialPizzaReceipt = "Pizza";
+			basePizzaCost += 10.49;
+			initialPizzaReceipt += "Pizza";
 		}
 		if(salad == true) {
-			baseSaladCost = 8.49;
-			initialSaladReceipt = "Salad";
+			baseSaladCost += 8.49;
+			initialSaladReceipt += "Salad";
 		}
 		if(wings == true) {
-			baseWingsCost = 9.99;
-			initialWingsReceipt = "Wings";
+			baseWingsCost += 9.99;
+			initialWingsReceipt += "Wings";
 		}
 		
 		double pizzaSizeCost = 0;
