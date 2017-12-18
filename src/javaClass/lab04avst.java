@@ -6,6 +6,9 @@ public class lab04avst
 {
     public static void main(String[] args)
     {
+    	money();
+    }
+    public static void money() {
         System.out.println("Lab04a, Student Version\n");
 
         double principal  = 250000; //The principal or starting amount of money
@@ -43,5 +46,6 @@ public class lab04avst
 
         System.out.println();
     }
+
 }
 

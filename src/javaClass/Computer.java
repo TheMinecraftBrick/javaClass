@@ -1,8 +1,9 @@
 package javaClass;
 
 import java.applet.Applet;
+import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.Image;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -11,7 +12,10 @@ import javax.swing.JFrame;
 import javaClass.KeyMouse.Key;
 
 public class Computer extends Applet {
-	
+	public static void reset(Graphics g)  {// reset the screen to blank
+		g.setColor(Color.WHITE);
+		g.fillRect(0, 0, 3000, 6000);
+	}
 
 	public void paint(Graphics g) {
 		compScene.computer(g);
@@ -127,32 +131,52 @@ public class Computer extends Applet {
 					
 
 				} else if (prgm.equalsIgnoreCase("PRGMS")) {
-
-					System.out.println("RPS, Lab5, Slots, Border Patrol");
 					//list all the programs
-
-					System.out.println("RPS, Lab5, Slots, Border Patrol, Order Pizza");
+					System.out.println("RPS, Lab5, Slots, Border Patrol, Order Pizza, Lab4a, Lab4b, Lab6, Hello,");
 
 				} else if (prgm.equalsIgnoreCase("Lab5")) {
+					reset(g);
 					Lab05vst lab5 = new Lab05vst();
 					lab5.paint(g); //lab 5
 
 				} else if (prgm.equalsIgnoreCase("Slots")) {
+					reset(g);
 					slots s = new slots();	
 					s.paint(g);//Slot machine code
 
 				}else if (prgm.equalsIgnoreCase("Border Patrol")) {
+					reset(g);
 					KeyMouse key = new KeyMouse();
 					key.paint(g);
 					//Attemts at running border patrol
 					
 				}else if (prgm.equalsIgnoreCase("Order Pizza")) {
 					PizzaDeliveryAttempt2.firstScan();
-					
+					//run the pizza program sabo made.
 				}else if (prgm.equalsIgnoreCase("Freeform")) {
+					reset(g);
+					g.setColor(Color.BLACK);
 					Freeform free = new Freeform();
 					free.paint(g);
+				}else if (prgm.equalsIgnoreCase("Lab6")) {
+					reset(g);
+					Lab06vst lab6 = new Lab06vst();
+					lab6.paint(g); //lab 6
+				}else if (prgm.equalsIgnoreCase("Lab4a")) {
+					lab04avst.money();
+					//lab 4a
+				}else if (prgm.equalsIgnoreCase("Lab4b")) {
+					reset(g);
+					g.setColor(Color.WHITE);
+					g.fillRect(0, 0, 3000, 6000);
+					Lab04bvst lab4b = new Lab04bvst();
+					lab4b.paint(g); //lab 4b
+				}else if (prgm.equalsIgnoreCase("Hello")) {
+				HelloWorld.hello();
+				}else if (prgm.equalsIgnoreCase("Credits")) {
+				
 				}
+				
 
 			}
 		}
