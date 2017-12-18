@@ -15,21 +15,22 @@ public class Computer extends Applet {
 
 	public void paint(Graphics g) {
 		compScene.computer(g);
-	}
+	}// paint for the main program
 
-	public static class compScene {
-		public static void computer(Graphics g) {
-
+	public static class compScene {//new class for comp
+		public static void computer(Graphics g) { //computer method
 			
-			Scanner input = new Scanner(System.in);
+			Scanner input = new Scanner(System.in); //Input for password
 			while (true) {
-				Scanner input1 = new Scanner(System.in);
+				Scanner input1 = new Scanner(System.in); //check for input
 				System.out.println("Please Enter the password: ");
 				String password = input1.nextLine();
-				if (password.equalsIgnoreCase("memes")) {
-					break;
+				if (password.equalsIgnoreCase("memes")) { //password block. If password = memes, continue
+					break; 
 				}
 			}
+			
+			
 			System.out.println("Hello User, please enter your name: ");
 			String name = input.nextLine();
 			System.out.println("Welcome " + name + ", to The JAVA mini computer! A recode of the python version");
@@ -121,17 +122,19 @@ public class Computer extends Applet {
 					System.out.println("RPS, Lab5, Slots, Border Patrol");
 				} else if (prgm.equalsIgnoreCase("Lab5")) {
 					Lab05vst lab5 = new Lab05vst();
-					lab5.paint(g);
+					lab5.paint(g); //lab 5
 
 				} else if (prgm.equalsIgnoreCase("Slots")) {
 					slots s = new slots();	
-					s.paint(g);
+					s.paint(g);//Slot machine code
 
 				}else if (prgm.equalsIgnoreCase("Border Patrol")) {
 					KeyMouse key = new KeyMouse();
 					key.paint(g);
+					//Attemts at running border patrol
 					
 				}else if (prgm.equalsIgnoreCase("Order Pizza")) {
+					//Sabo Add code here
 					
 				}else if (prgm.equalsIgnoreCase("Freeform")) {
 					Freeform free = new Freeform();
