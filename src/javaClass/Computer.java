@@ -127,8 +127,12 @@ public class Computer extends Applet {
 					
 
 				} else if (prgm.equalsIgnoreCase("PRGMS")) {
+
 					System.out.println("RPS, Lab5, Slots, Border Patrol");
 					//list all the programs
+
+					System.out.println("RPS, Lab5, Slots, Border Patrol, Order Pizza");
+
 				} else if (prgm.equalsIgnoreCase("Lab5")) {
 					Lab05vst lab5 = new Lab05vst();
 					lab5.paint(g); //lab 5
@@ -143,7 +147,7 @@ public class Computer extends Applet {
 					//Attemts at running border patrol
 					
 				}else if (prgm.equalsIgnoreCase("Order Pizza")) {
-					//Sabo Add code here
+					PizzaDeliveryAttempt2.firstScan();
 					
 				}else if (prgm.equalsIgnoreCase("Freeform")) {
 					Freeform free = new Freeform();
