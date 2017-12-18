@@ -13,19 +13,25 @@ public class Credits extends Applet {
 
 	public static void credits(Graphics g) {
 		
-		int width = 50;
-		int height = 540;
-		int fontSize = 70;
+		int width = -200;
+		int height = 400;
+		int fontSize = 175;
 		
 		int width2 = 15;
 		int height2 = 650;
 		int fontSize2 = 80;
 		
+		int width3 = 15;
+		int height3 = 650;
+		int fontSize3 = 80;
+		
+		
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, 1920, 1080);
 		
 		g.setFont(new Font("Serif Gothic", Font.BOLD, 40));
-		g.setColor(Color.blue);
+		Color Swblue = new Color(22, 206, 214);
+		g.setColor(Swblue);
 		g.drawString("A long time ago in a computer lab", 25, 250);
 		g.drawString("far, far away...", 25, 300);
 		g.setColor(Color.BLACK);
@@ -33,36 +39,65 @@ public class Credits extends Applet {
 		g.drawString("A long time ago in a computer lab", 25, 250);
 		g.drawString("far, far away...", 25, 300);
 		
-		g.setFont(new Font("Credits Font", Font.BOLD, fontSize));
+		g.setFont(new Font("Bauhaus 93", Font.BOLD, fontSize));
 		
 		g.setColor(Color.yellow);
 		g.drawString("JAVA Mini Computer", width, height);
 		Comp.delay(200);
 		g.setColor(Color.BLACK);
 		g.drawString("JAVA Mini Computer", width, height);
-
-		for (int x = 0; x <= 70; x++) {
+		
+		for (int x = 0; x <= 100; x++) {
 			Comp.delay(100);
-			
-			g.setColor(Color.black);
-			g.drawString("By: Ben and Kush", width2, height2);
-			fontSize2--;
-			width2 += 5;
-			height2 -= 5;
-			
-			g.setFont(new Font("Credits Font", Font.BOLD, fontSize));
+		
+			g.setFont(new Font("Bauhaus 93", Font.BOLD, fontSize));
 			g.setColor(Color.black);
 			g.drawString("JAVA Mini Computer", width, height);
 			
 			g.setColor(Color.yellow);
-			fontSize--;
-			width += 5;
+			fontSize -= 5;
+			width += 17;
 			height -= 5;
-			g.setFont(new Font("Credits Font", Font.BOLD, fontSize));
+		
+			g.setFont(new Font("Bauhaus 93", Font.BOLD, fontSize));
 			g.drawString("JAVA Mini Computer", width, height);
 			
-			g.setFont(new Font("Second font", Font.BOLD, fontSize2));
-			g.drawString("By: Ben and Kush", width2, height2);
+			if(fontSize <= 0) {
+				Comp.delay(1000);
+				break;
+				
+			}
 		}
+		for(int y = 0; y <= 100; y++) {
+			Comp.delay(100);
+			g.setColor(Color.black);
+			g.drawString("By: Ben and Kush", width2, height2);
+			fontSize2--;
+			width2 += 5;
+			height2 -= 7;
+			g.setFont(new Font("Bauhaus 93", Font.BOLD, fontSize2));
+			g.setColor(Color.YELLOW);
+			g.drawString("By: Ben and Kush", width2, height2);
+			
+			if(fontSize2 <= 0) {
+				break;
+			}
+		}
+		for(int y = 0; y <= 100; y++) {
+			Comp.delay(100);
+			g.setColor(Color.black);
+			g.drawString("By: Ben and Kush", width2, height2);
+			fontSize2--;
+			width2 += 5;
+			height2 -= 7;
+			g.setFont(new Font("Bauhaus 93", Font.BOLD, fontSize2));
+			g.setColor(Color.YELLOW);
+			g.drawString("By: Ben and Kush", width2, height2);
+			if(fontSize2 <= 0) {
+				
+				break;
+			}
+		}
+		
 	}
 }
