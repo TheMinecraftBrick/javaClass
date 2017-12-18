@@ -53,12 +53,14 @@ public class KeyMouse extends JFrame {
 		b = 10;
 		s = 1;
 		story = 0;
+		
 
 	}
 
 	public static void main(String[] args) {
 		new KeyMouse();
 		//main to run it
+		
 	}
 
 	// Controls
