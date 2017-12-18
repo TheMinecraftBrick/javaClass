@@ -131,7 +131,7 @@ public class Computer extends Applet {
 				}else if (prgm.equalsIgnoreCase("Border Patrol")) {
 					KeyMouse key = new KeyMouse();
 					key.paint(g);
-					//Attemts at running border patrol
+					//Attempts at running border patrol
 					
 				}else if (prgm.equalsIgnoreCase("Order Pizza")) {
 					PizzaDeliveryAttempt2.firstScan();
