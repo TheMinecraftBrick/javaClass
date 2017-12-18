@@ -22,9 +22,9 @@ public class Credits extends Applet {
 		int fontSize2 = 80;
 		
 		g.setColor(Color.BLACK);
-		g.fillRect(0, 0, 800, 600);
+		g.fillRect(0, 0, 1920, 1080);
 		
-		g.setFont(new Font("Credits Font", Font.BOLD, 40));
+		g.setFont(new Font("Serif Gothic", Font.BOLD, 40));
 		g.setColor(Color.blue);
 		g.drawString("A long time ago in a computer lab", 25, 250);
 		g.drawString("far, far away...", 25, 300);
@@ -64,6 +64,5 @@ public class Credits extends Applet {
 			g.setFont(new Font("Second font", Font.BOLD, fontSize2));
 			g.drawString("By: Ben and Kush", width2, height2);
 		}
-
 	}
 }
