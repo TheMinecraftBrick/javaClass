@@ -17,9 +17,9 @@ public class Credits extends Applet {
 		int height = 550;
 		int fontSize = 70;
 		
-		int width2 = 50;
-		int height2 = 550;
-		int fontSize2 = 70;
+		int width2 = 15;
+		int height2 = 590;
+		int fontSize2 = 80;
 		
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, 800, 600);
@@ -31,7 +31,7 @@ public class Credits extends Applet {
 		g.setColor(Color.BLACK);
 		Comp.delay(3000);
 		g.drawString("A long time ago in a computer lab", 25, 250);
-		g.drawString("far, far away...", 25, 325);
+		g.drawString("far, far away...", 25, 300);
 		
 		g.setFont(new Font("Credits Font", Font.BOLD, fontSize));
 		
@@ -43,8 +43,17 @@ public class Credits extends Applet {
 
 		for (int x = 0; x <= 70; x++) {
 			Comp.delay(100);
+			
+			g.setColor(Color.black);
+			g.drawString("By: Ben and Kush", width2, height2);
+			fontSize2--;
+			width2 += 5;
+			height2 -= 5;
+			
+			g.setFont(new Font("Credits Font", Font.BOLD, fontSize));
 			g.setColor(Color.black);
 			g.drawString("JAVA Mini Computer", width, height);
+			
 			g.setColor(Color.yellow);
 			fontSize--;
 			width += 5;
@@ -52,7 +61,11 @@ public class Credits extends Applet {
 			g.setFont(new Font("Credits Font", Font.BOLD, fontSize));
 			g.drawString("JAVA Mini Computer", width, height);
 			
-			//hi
+			g.setFont(new Font("Second font", Font.BOLD, fontSize2));
+			g.drawString("By: Ben and Kush", width2, height2);
+			
+			
+			
 			
 		}
 
