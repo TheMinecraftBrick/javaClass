@@ -21,9 +21,9 @@ public class Credits extends Applet {
 		int height2 = 650;
 		int fontSize2 = 80;
 		
-		int width3 = 15;
-		int height3 = 650;
-		int fontSize3 = 80;
+		int width3 = -400;
+		int height3 = 750;
+		int fontSize3 = 100;
 		
 		
 		g.setColor(Color.BLACK);
@@ -72,30 +72,29 @@ public class Credits extends Applet {
 			Comp.delay(100);
 			g.setColor(Color.black);
 			g.drawString("By: Ben and Kush", width2, height2);
+			g.drawString("The most amazing collection of homemade computer games in the galaxy", width3, height3);
+			
 			fontSize2--;
 			width2 += 5;
 			height2 -= 7;
+			
+			fontSize3 --;
+			width3 += 8;
+			height3 -= 7;
+			
 			g.setFont(new Font("Bauhaus 93", Font.BOLD, fontSize2));
 			g.setColor(Color.YELLOW);
 			g.drawString("By: Ben and Kush", width2, height2);
 			
+			g.drawString("The most amazing collection of homemade computer games in the galaxy", width3, height3);
+			
 			if(fontSize2 <= 0) {
-				break;
+				fontSize2 = 1;
 			}
-		}
-		for(int y = 0; y <= 100; y++) {
-			Comp.delay(100);
-			g.setColor(Color.black);
-			g.drawString("By: Ben and Kush", width2, height2);
-			fontSize2--;
-			width2 += 5;
-			height2 -= 7;
-			g.setFont(new Font("Bauhaus 93", Font.BOLD, fontSize2));
-			g.setColor(Color.YELLOW);
-			g.drawString("By: Ben and Kush", width2, height2);
-			if(fontSize2 <= 0) {
-				break;
+			if(fontSize3 <= 0) {
+				fontSize3 = 1;
 			}
+			
 		}
 		
 	}
