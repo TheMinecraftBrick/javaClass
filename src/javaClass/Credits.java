@@ -94,7 +94,6 @@ public class Credits extends Applet {
 			g.setColor(Color.YELLOW);
 			g.drawString("By: Ben and Kush", width2, height2);
 			if(fontSize2 <= 0) {
-				
 				break;
 			}
 		}
