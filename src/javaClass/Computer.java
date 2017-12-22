@@ -132,7 +132,7 @@ public class Computer extends Applet {
 
 				} else if (prgm.equalsIgnoreCase("PRGMS")) {
 					//list all the programs
-					System.out.println("RPS, Lab5, Slots, Border Patrol, Order Pizza, Lab4a, Lab4b, Lab6, Hello,");
+					System.out.println("RPS, Lab5, Slots, Border Patrol, Order Pizza, Lab4a, Lab4b, Lab6, Hello, Credits");
 
 				} else if (prgm.equalsIgnoreCase("Lab5")) {
 					reset(g);
